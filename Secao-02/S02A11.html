@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS - Guia completo</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+    <p>Curso: {{curso}} | Instrutor: {{ nomeDoInstrutor() }}</p>
+</div>
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        data: {
+            curso: 'VueJS',
+            instrutor: 'Plínio Naves'
+        },
+        methods: {
+            nomeDoInstrutor: function () {
+                return this.instrutor;
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

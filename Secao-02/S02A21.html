@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS - Guia completo</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+    <button v-on:click="onClick">Botão esquerdo</button>
+    <br>
+    <button v-on:click.middle="onClick">Botão do meio</button>
+    <br>
+    <button v-on:click.right="onClick">Botão do direito</button>
+    <br>
+    <button v-on:click.right.prevent="onClick">Botão do direito sem menu de contexto</button>
+
+</div>
+
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        methods: {
+            onClick: function (event) {
+                console.log('Botão '+ event.button + ' pressionado!')
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

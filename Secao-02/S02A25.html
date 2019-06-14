@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS - Guia completo</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+    <p>Nome: {{ nomeCompleto }}</p>
+    <button @click="alterarNomes">Alterar nomes</button>
+</div>
+
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        data: {
+            primeiroNome: 'William',
+            ultimoNome: 'de Paula',
+            // nomeCompleto: 'William de Paula'
+        },
+        // watch: {
+        //     primeiroNome: function (novoPrimeiroNome, antigoPrimeiroNome) {
+        //         this.nomeCompleto = novoPrimeiroNome + " " + this.ultimoNome;
+        //     },
+        //
+        //     ultimoNome: function (novoUltimoNome, antigoUltimoNome) {
+        //         this.nomeCompleto = this.primeiroNome + " " + novoUltimoNome;
+        //     }
+        // },
+        computed: {
+            nomeCompleto: function () {
+                return this.primeiroNome + ' ' + this.ultimoNome;
+            }
+        },
+        methods: {
+            alterarNomes: function (event) {
+                this.primeiroNome = 'de Paula';
+                this.ultimoNome = 'William';
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
