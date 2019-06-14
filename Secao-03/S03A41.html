@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS - Guia completo</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+    <button @click="mostrar = !mostrar">Toggle</button>
+    <p v-show="mostrar">Diretiva v-show "{{ mostrar }}"</p>
+</div>
+
+<script type="text/javascript">
+    new Vue({
+       el: '#app',
+        data: {
+           mostrar: true
+        }
+    });
+</script>
+
+</body>
+</html>
