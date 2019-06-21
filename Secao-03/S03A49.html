@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS - Guia completo</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+    <p>Tarefas:</p>
+    <ul v-if="tarefasIncompletas.length">
+        <li v-for="tarefa in tarefas" :key="tarefa.id" v-if="!tarefa.completa">{{ tarefa.titulo }}</li>
+    </ul>
+    <p v-else>Não existem tarefas a fazer.</p>
+
+    <h1>Tarefas Incompletas</h1>
+
+    <ul>
+        <li v-for="tarefa in tarefasIncompletas" :key="tarefa.id">{{ tarefa.titulo }}</li>
+    </ul>
+
+    <h1>Tarefas Incompletas</h1>
+
+    <ul>
+        <li v-for="tarefa in tarefasCompletas" :key="tarefa.id">{{ tarefa.titulo }}</li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    new Vue({
+       el: '#app',
+        data: {
+            tarefas: [
+                { id: 1, titulo: 'Aprender JavaScript', completa: true},
+                { id: 2, titulo: 'Aprender VueJS', completa: true},
+                { id: 3, titulo: 'Aprender Vuex', completa: true },
+                { id: 4, titulo: 'Aprender VueRouter', completa: true }
+            ]
+        },
+        computed: {
+           tarefasIncompletas: function () {
+               return this.tarefas.filter(function (tarefa) {
+                  return !tarefa.completa;
+               });
+           },
+           tarefasCompletas: function () {
+                return this.tarefas.filter(function (tarefa) {
+                   return tarefa.completa;
+                });
+           }
+        }
+    });
+</script>
+
+</body>
+</html>

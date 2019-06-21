@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+    <div id="app">
+        <h2 ref="meuTitulo">{{ titulo }}</h2>
+        <button @click="alterarTitulo">Alterar Titulo</button>
+    </div>
+
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                titulo: 'Vue'
+            },
+            methods: {
+                alterarTitulo: function () {
+                    this.$refs.meuTitulo.innerText = 'Curso VueJS';
+                },
+
+            }
+        });622
+
+        console.log(vm);
+
+        setTimeout(function () {
+            vm.titulo = 'Instância Vue';
+        }, 5000);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+    <div id="app">
+        <h2>Instância Vue</h2>
+        <p>{{ titulo }}</p>
+        <h3>Propriedades dinâmicas: </h3>
+        <p>{{ novaPropriedade }}</p>
+        <p>{{ usuario }}</p>
+    </div>
+
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                titulo: 'Curso de VueJS',
+                usuario: {}
+            }
+
+        });
+
+        // vm.tiyulo
+        // vm.novaPropriedade = "Nova propriedade!"; // Não reativo
+
+        console.log(vm);
+        setTimeout(function () {
+            vm.novaPropriedade = "Nova propriedade!";
+            vm.$set(vm.usuario, 'nome', 'william');
+            setTimeout(function () {
+                vm.novaPropriedade = "Novo valor apos o 2 timeout";
+                vm.usuario = 'Novo Nome apos 2 timeout'; // com novaPropriedade não é reativa ela só sera atualizada
+                // apos um update causado por outra instancia reativa
+            }, 3000);
+        }, 3000)
+
+
+    </script>
+</body>
+</html>
