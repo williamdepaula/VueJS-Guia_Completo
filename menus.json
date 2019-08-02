@@ -1,0 +1,41 @@
+{
+    "Contrato": {
+        "Gestão de Contratos": "subsystems/contrato/pages/consultarContrato.jsf",
+        "Contratos Especiais": "subsystems/contratoEspecial/pages/consultarContratoEspecial.jsf",
+        "Extinção Contratual": "subsystems/finalizacao/pages/consultarExtincaoContratual.jsf",
+        "Sanção": "subsystems/execucao/pages/consultarSancao.jsf"
+    },
+    "Relatórios":{
+        "Contratos a Vencer ou Vencidos": "subsystems/relatorio/pages/relatorioContratosAVencerOuVencidos.jsf",
+        "Cronograma Físico Financeiro": "subsystems/relatorio/pages/relatorioCronogramaFisicoFinanceiro.jsf",
+        "Financeiro Sintético": "subsystems/relatorio/pages/relatorioFinanceiroSintetico.jsf",
+        "Relação dos Contratos": "subsystems/relatorio/pages/relatorioRelacaoContratos.jsf",
+        "Listagem de Empenhos e Pagamentos por Contrato": "subsystems/relatorio/pages/relatorioEmpenhosEPagamentosContratos.jsf",
+        "Contratos em Andamento": "subsystems/relatorio/pages/relatorioContratosAndamento.jsf",
+        "Movimentação Financeira": "subsystems/relatorio/pages/relatorioMovimentacaoFinanceira.jsf",
+        "Situação Contratual": "subsystems/relatorio/pages/relatorioSituacaoContratual.jsf",
+        "Demonstrativo Físico Financeiro": "subsystems/relatorio/pages/relatorioDemonstrativoFisicoFinanceiro.jsf",
+        "Resumo do Contrato": "subsystems/relatorio/pages/relatorioResumoContrato.jsf",
+        "Demonstrativo Financeiro": "subsystems/relatorio/pages/relatorioDemonstrativoFinanceiro.jsf",
+        "Contratos por Fornecedor": "subsystems/relatorio/pages/relatorioContratosPorFornecedor.jsf",
+        "Relatório de Inconsistência": "subsystems/relatorio/pages/relatorioInconsistencia.jsf"
+    },
+    "Cadastros": {
+        "Tipo de Anexo": "subsystems/cadastro/pages/consultarTipoAnexo.jsf",
+        "Tipo Instrumento Contratual": "subsystems/cadastro/pages/consultarTipoDocumento.jsf",
+        "Tipo Documento Fiscal": "subsystems/cadastro/pages/manterTipoDocumentoFiscal.jsf",
+        "Tipo de Contrato": "subsystems/cadastro/pages/consultarTipoAquisicao.jsf",
+        "Subtipo": "subsystems/cadastro/pages/consultarPacote.jsf",
+        "Categoria": "subsystems/avaliacao/pages/consultarCategoria.jsf",
+        "Avaliação": "subsystems/avaliacao/pages/consultarAvaliacao.jsf",
+        "Modelo de Documento": "subsystems/cadastro/pages/consultarModeloDocumento.jsf",
+        "Minuta": "subsystems/cadastro/pages/consultarModeloMinuta.jsf",
+        "Dotação Orçamentária": "subsystems/financeiro/pages/consultarDotacao.jsf",
+        "Tipo Encargo": "subsystems/financeiro/pages/manterTipoEncargo.jsf",
+        "Notificações": "subsystems/financeiro/pages/manterTipoEncargo.jsf"
+    },
+    "Configuração": {
+        "Integração Pré-Empenho": "subsystems/integracao/pages/consultarOrgaoIntegracao.jsf",
+        "Fluxo": "subsystems/fluxo/fluxoPageList.jsf"
+    }
+}
