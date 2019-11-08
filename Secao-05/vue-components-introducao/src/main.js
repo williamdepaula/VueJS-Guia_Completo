@@ -1,13 +1,16 @@
 import Vue from 'vue'
 
-const data = {
+/* const data = {
   titulo: 'Curso de VueJS',
   contador: 0
-}
+} */
 
 Vue.component('wpp-component', {
   data: function() {
-    return data
+    return {
+      titulo: 'Curso de VueJS',
+      contador: 0
+    }
   },
   methods: {
     incrementar: function() {
@@ -23,5 +26,9 @@ Vue.component('wpp-component', {
 })
 
 new Vue({
-  el: '#app',
+  el: '#app1',
+})
+
+new Vue({
+  el: '#app2',
 })
