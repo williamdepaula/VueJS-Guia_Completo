@@ -1,4 +1,4 @@
-# vue-cli-hello-world
+# vue-components-introducao
 
 ## Project setup
 ```
